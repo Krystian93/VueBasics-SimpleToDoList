@@ -35,6 +35,17 @@ new Vue({
       })
     },
 
+    deleteTask(taskID) {
+      let taskIndex
+      this.tasks.find(task => {
+        if (task.id === taskID) {
+          taskIndex = this.tasks.indexOf(task)
+
+        }
+      })
+      this.tasks.splice(taskIndex, 1)
+    }
+
 
   },
   computed: {

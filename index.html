@@ -19,12 +19,15 @@
       <li v-for="task in tasks" :key="task.id" v-if="!task.completed" 
       @click="()=>checkDone(task.id)">
       {{task.title}}
+      <span @click.stop="()=>deleteTask(task.id)">&#10005</span>
       </li>
     </ul>
 
     <h2>completed tasks</h2>
     <ul>
-      <li  v-for="task in completedTask" :key="task.id"  @click="()=>checkDone(task.id)" :class="{'strike' : task.completed}">{{task.title}}</li>
+      <li  v-for="task in completedTask" :key="task.id"  @click="()=>checkDone(task.id)" :class="{'strike' : task.completed}">{{task.title}}
+       <span @click.stop="()=>deleteTask(task.id)">&#10005</span>
+      </li>
     </ul>
   </div>
 

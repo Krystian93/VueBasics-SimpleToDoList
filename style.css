@@ -40,6 +40,8 @@ input {
 
 
 li {
+    display: flex;
+    justify-content: space-between;
     margin: .2rem 0;
     cursor: pointer;
     border: 1px solid black;
@@ -57,4 +59,13 @@ li {
     100% {
         transform: translateX(0);
     }
+}
+
+span {
+    display: block;
+}
+
+span:hover {
+    transform: scale(1.5);
+    color: red;
 }
