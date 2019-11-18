@@ -1,3 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-panel {
+    margin-top: 2rem;
+    display: flex;
+}
+
 .strike {
-    text-decoration: line-through;
+    background-color: rgb(128, 216, 128);
+    animation: show-right 1s;
+}
+
+@keyframes show-right {
+    0% {
+        transform: translateX(-40px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.btnAddTask {
+    padding: 1rem;
+}
+
+input {
+    font-size: 2rem;
+}
+
+
+li {
+    margin: .2rem 0;
+    cursor: pointer;
+    border: 1px solid black;
+    list-style: none;
+    padding: .5rem 1rem;
+    animation: show-left 1s;
+
+}
+
+@keyframes show-left {
+    0% {
+        transform: translateX(40px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }

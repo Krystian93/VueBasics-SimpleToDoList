@@ -33,6 +33,13 @@ new Vue({
           task.completed = !task.completed;
         }
       })
-    }
+    },
+
+
   },
+  computed: {
+    completedTask() {
+      return this.tasks.filter(task => task.completed);
+    }
+  }
 })
